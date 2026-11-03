@@ -1,0 +1,65 @@
+{
+ "model": "rela",
+ "repo": "LM_2021_ReLA-transformer-pytorch",
+ "target_repo": "LM_Dec_Attention_ReLA",
+ "category": "Attention",
+ "upstream": "vendored from RichardMinsooGo/LM_2021_ReLA-transformer-pytorch (see LICENSE in vendor folder if present)",
+ "unified": [
+  "causal=True"
+ ],
+ "torch": "2.5.1+cu124",
+ "gpu": "NVIDIA GeForce RTX 3070 Ti",
+ "stage": "scaling",
+ "started": "2026-11-02 11:31:08",
+ "smoke": false,
+ "rows": [
+  {
+   "len": 512,
+   "train": {
+    "peak_mb": 205.2,
+    "ms": 25.0,
+    "dtype": "bf16"
+   },
+   "infer": {
+    "peak_mb": 50.8,
+    "ms": 8.0,
+    "dtype": "bf16"
+   }
+  },
+  {
+   "len": 1024,
+   "train": {
+    "peak_mb": 453.2,
+    "ms": 26.5,
+    "dtype": "bf16"
+   },
+   "infer": {
+    "peak_mb": 92.5,
+    "ms": 7.5,
+    "dtype": "bf16"
+   }
+  },
+  {
+   "len": 2048,
+   "train": {
+    "peak_mb": 1267.4,
+    "ms": 38.5,
+    "dtype": "bf16"
+   },
+   "infer": {
+    "peak_mb": 253.5,
+    "ms": 13.3,
+    "dtype": "bf16"
+   }
+  },
+  {
+   "len": 4096,
+   "note": "not supported (model built for <= 2048)"
+  },
+  {
+   "len": 8192,
+   "note": "not supported (model built for <= 2048)"
+  }
+ ],
+ "seconds": 2.6
+}
